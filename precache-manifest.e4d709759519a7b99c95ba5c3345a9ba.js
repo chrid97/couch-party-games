@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "25bbed4284010bd17a7358822123c142",
+    "revision": "1a6016a2789c8d85088e3510c2f655b2",
     "url": "/couch-party-games/index.html"
   },
   {
