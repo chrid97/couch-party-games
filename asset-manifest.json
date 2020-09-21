@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/couch-party-games/static/css/main.c299fff7.chunk.css",
+    "main.js": "/couch-party-games/static/js/main.a5ad7a78.chunk.js",
+    "main.js.map": "/couch-party-games/static/js/main.a5ad7a78.chunk.js.map",
+    "runtime-main.js": "/couch-party-games/static/js/runtime-main.e06fdcb4.js",
+    "runtime-main.js.map": "/couch-party-games/static/js/runtime-main.e06fdcb4.js.map",
+    "static/js/2.0de330dc.chunk.js": "/couch-party-games/static/js/2.0de330dc.chunk.js",
+    "static/js/2.0de330dc.chunk.js.map": "/couch-party-games/static/js/2.0de330dc.chunk.js.map",
+    "index.html": "/couch-party-games/index.html",
+    "precache-manifest.b34362228c818a1bafe542c030bf5605.js": "/couch-party-games/precache-manifest.b34362228c818a1bafe542c030bf5605.js",
+    "service-worker.js": "/couch-party-games/service-worker.js",
+    "static/css/main.c299fff7.chunk.css.map": "/couch-party-games/static/css/main.c299fff7.chunk.css.map",
+    "static/js/2.0de330dc.chunk.js.LICENSE.txt": "/couch-party-games/static/js/2.0de330dc.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e06fdcb4.js",
+    "static/js/2.0de330dc.chunk.js",
+    "static/css/main.c299fff7.chunk.css",
+    "static/js/main.a5ad7a78.chunk.js"
+  ]
+}
