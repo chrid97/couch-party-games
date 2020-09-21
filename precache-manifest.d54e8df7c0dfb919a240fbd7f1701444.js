@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1a6016a2789c8d85088e3510c2f655b2",
+    "revision": "4c50a10804e54a5c1b0fcebc4b05e462",
     "url": "/couch-party-games/index.html"
   },
   {
-    "revision": "dea6fffeb7eafbef2a09",
-    "url": "/couch-party-games/static/css/main.c299fff7.chunk.css"
+    "revision": "d8a880164ab0840ab21a",
+    "url": "/couch-party-games/static/css/main.5b903913.chunk.css"
   },
   {
     "revision": "ef14f5dbaa3acea3b27a",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/couch-party-games/static/js/2.0de330dc.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "dea6fffeb7eafbef2a09",
-    "url": "/couch-party-games/static/js/main.a5ad7a78.chunk.js"
+    "revision": "d8a880164ab0840ab21a",
+    "url": "/couch-party-games/static/js/main.fa9178f5.chunk.js"
   },
   {
     "revision": "4b66222235923b581405",
