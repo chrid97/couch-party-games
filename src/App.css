@@ -1,38 +1,235 @@
+a {
+  text-decoration: none;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+}
+
+.color {
+  color: var(--accent);
+}
+
 .App {
-  text-align: center;
+  height: 100%;
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App > *:not(nav) {
+  width: 100%;
+  height: calc(50% - 51px);
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* background-color: #282c34; */
+  /* min-height: 100vh; */
+  /* font-size: calc(10px + 2vmin); */
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav {
+  /* height: 80px; */
+  height: 56px;
+  width: 100%;
+  /* background-color: #000000; */
+  background-color: #2C2C2C;
+  box-shadow: 0px 1px 3px 1px rgba(0,0,0,0.3);
+
+  display: flex;
+  place-items: center;
+  justify-content: center;
+}
+
+nav > a {
+  color: white;
+  margin-right: 30px;
+}
+
+.main {
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+}
+
+.search-bar {
+  height: 60px;
+  max-width: 100%;
+  border-radius: 10px;  
+  /* max-width: 912px; */
+  width: 912px;
+  /* height: 91px; */
+  height: 75px;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
+}
+
+.search {
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  /* font-size: 18px; */
+  font-size: 25px;
+}
+
+.search:focus-within {
+  outline: none;
+  border: 1px solid var(--accent);
+}
+
+.section2 {
+  display: flex;
+}
+
+.card {
+  justify-content: center;
+  /* width: 256px; */
+  /* height: 390px; */
+
+  /* height: 426px; 
+  width: 280px; */
+
+  /* height: calc(100% - 24px); */
+  background-color: black;
+  color: white;
+  margin-right: 24px;
+  border-radius: 15px;
+  /* border-radius: 10px; */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  box-shadow: rgba(53, 45, 71, 0.75) 0px 0px 0px 1000px inset;
+  cursor: pointer;
+  /* box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5); */
+
+  /* width: 364px;
+  height: 381px; */
+
+  width: 280px;
+  height: 360px;
+}
+
+.card:nth-child(1) {
+  background-image: url(https://upload.wikimedia.org/wikipedia/en/4/45/Wasteland_3_cover_art.jpg);
+}
+
+.card:nth-child(2) {
+  background-image: url(https://www.team17.com/wp-content/uploads/2016/06/overcooked-featured-1260x709.jpg);
+}
+
+.card:nth-child(3) {
+  background-image: url(https://media.playstation.com/is/image/SCEA/minecraft-starter-collection-squareboxart-01-ps4-11dec19-en-us?$native_nt$);
+}
+
+.card:nth-child(4) {
+  background-image: url(https://upload.wikimedia.org/wikipedia/en/5/5e/Fall_Guys_cover.jpg);
+}
+
+.card button {
+  padding: 8px 32px;
+  background-color: transparent;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #fff;
+  color: white;
+  background: hsla(0,0%,100%,.16);
+  cursor: pointer;
+}
+
+.card:hover > * {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.card:hover > button {
+  background-color: hsla(0,0%,100%,.25);
+}
+
+.browse {
+  height: calc(100% - 56px);
+  max-width: 1520px;
+  /* max-width: 1380px; */
+  margin: 0 auto;
+  min-width: 320px;
+  /* padding-left: 20px;
+  padding-right: 20px; */
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.browse > * {
+  margin-top: 30px;
+}
+
+.game-types {
+  background-color: white;
+  /* padding-bottom: 45px; */
+  justify-content: center;
+}
+
+.card2 {
+  width: 185px;
+  height: 265px;  
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(https://upload.wikimedia.org/wikipedia/en/5/5e/Fall_Guys_cover.jpg);
+  /* margin-right: 45px; */
+  /* margin-right: 6px; */
+}
+
+.filter-input {
+  padding: 11px 16px;
+  /* width: 240px; */
+  width: 180px;
+  height: 38px;
+  box-shadow: 0 4px 16px 0 rgba(22, 42, 90, 0.12);
+  transition: box-shadow .3s ease;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 14px;
+  /* min-height: 44px; */
+  border: none;
+  outline: none;
+  margin-right: 45px;
+}
+
+.filter-input::placeholder {
+  color: black;
+}
+
+.name {
+  padding: 10px 0;
+}
+
+.filters {
+  display: flex;
+}
+
+.game-list {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.game-card {
+  flex: 1 0 16%;
+  margin-bottom: 50px;
+  color: black;
+}
+
+.banner {
+  background-image: url(https://wallpaperaccess.com/full/3511118.jpg);
+  background-position: 50% 35%;
+  /* background-position: center center; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* height: 400px; */
+  height: 655px;
+  /* margin-top: -58px; */
 }
