@@ -29,5 +29,7 @@ code {
 
 :root {
   --background: #EDF1F5;
-  --accent: #E31B6D;
+  /* --accent: #E31B6D; */
+  /* --accent: #61dafb;; */
+  --accent: #ee617d;
 }
