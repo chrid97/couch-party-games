@@ -7,7 +7,6 @@ function App() {
   return (
     <div className="App center">
       <Navbar />
-      {/* <div>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> */}
     </div>
   );
 }
@@ -46,7 +45,7 @@ function Home() {
 
 function Header() {
   return (
-    <header className="App-header center">
+    <header className="header center">
       <div className="center main">
         <h1>
           Discover what <span className="color">games</span> you&lsquo;ll play
@@ -67,7 +66,7 @@ function Header() {
 
 function Section() {
   return (
-    <section className="game-types center">
+    <section className="game-categories center">
       <section className="section2">
         <Card title="Campaign Co-Op" />
         <Card title="Couch Co-Op" />
