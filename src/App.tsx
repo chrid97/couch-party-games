@@ -1,11 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./App.css";
+import MagnifyingGlass from './images/magnifying-glass.svg';
 
 function App() {
   return (
     <div className="App center">
       <Navbar />
+      {/* <div>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> */}
     </div>
   );
 }
@@ -51,7 +53,7 @@ function Header() {
           with your friends!
         </h1>
         <div className="search-bar center">
-          {/* <img src="../images/magnifying-glass.svg" alt="Magnifying Glass" /> */}
+          <img src={MagnifyingGlass} alt="Magnifying Glass" />
           <input
             className="search"
             type="text"
@@ -66,7 +68,6 @@ function Header() {
 function Section() {
   return (
     <section className="game-types center">
-      {/* <h1>What do you feel like playing with your friends?</h1> */}
       <section className="section2">
         <Card title="Campaign Co-Op" />
         <Card title="Couch Co-Op" />
@@ -137,11 +138,7 @@ function FilterInput({ text }: { text: string }) {
     <div>
       <div className="name">{text}</div>
       <div>
-        <select className="filter-input">
-          <option value="" disabled selected>
-            Any
-          </option>
-        </select>
+        <select defaultValue="Any" className="filter-input"></select>
       </div>
     </div>
   );
@@ -158,12 +155,29 @@ function GameCard() {
 
 function Game() {
   return (
-    <div>
-      <div className="banner">
-
+    <div className="container">
+      <div className="carousel center">
+        <div className="banner"></div>
+        <div className="carousel-items">
+          <CarouselItem />
+          <CarouselItem />
+          <CarouselItem />
+          <CarouselItem />
+          <CarouselItem />
+        </div>
       </div>
+      <div>Fall Guys</div>
+      <section># of Players Platform Genre Theme</section>
     </div>
-  )
+  );
+}
+
+function CarouselItem() {
+  return (
+    <div className="carousel-item">
+      <img src="https://via.placeholder.com/220x130" alt=""></img>
+    </div>
+  );
 }
 
 export default App;

@@ -2,6 +2,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  color: var(--accent);
+}
+
 .center {
   display: flex;
   flex-direction: column;
@@ -28,10 +32,6 @@ a {
   /* font-size: calc(10px + 2vmin); */
 }
 
-.App-link {
-  color: #61dafb;
-}
-
 nav {
   /* height: 80px; */
   height: 56px;
@@ -39,7 +39,7 @@ nav {
   /* background-color: #000000; */
   background-color: #2C2C2C;
   box-shadow: 0px 1px 3px 1px rgba(0,0,0,0.3);
-
+  /* border-top: 6px solid var(--accent); */
   display: flex;
   place-items: center;
   justify-content: center;
@@ -57,6 +57,7 @@ nav > a {
 }
 
 .search-bar {
+  flex-direction: row;
   height: 60px;
   max-width: 100%;
   border-radius: 10px;  
@@ -65,20 +66,28 @@ nav > a {
   /* height: 91px; */
   height: 75px;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
+  background-color: white;
+}
+
+.search-bar img {
+  height: 26px;
+  width: 26px;
+  margin: 20px;
 }
 
 .search {
   border: none;
   border-radius: 10px;
   width: 100%;
-  height: 100%;
-  /* font-size: 18px; */
   font-size: 25px;
+}
+
+.search-bar:focus-within {
+  border: 1px solid var(--accent);
 }
 
 .search:focus-within {
   outline: none;
-  border: 1px solid var(--accent);
 }
 
 .section2 {
@@ -230,6 +239,28 @@ nav > a {
   background-repeat: no-repeat;
   background-size: cover;
   /* height: 400px; */
-  height: 655px;
-  /* margin-top: -58px; */
+  /* height: 442px; */
+  /* height: 600px; */
+  height: 460px;
+  width: 100%;
+}
+
+.container {
+  /* display: flex;
+  flex-direction: column;
+  place-items: center; */
+}
+
+.carousel {
+}
+
+.carousel-items {
+  display: flex;
+  margin-top: 25px;
+  /* justify-content: space-around; */
+  /* flex: 1 0 16%; */
+}
+
+.carousel-item {
+  margin-right: 30px;
 }
