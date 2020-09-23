@@ -23,7 +23,7 @@ a:hover {
 
 .header {
   height: calc(50% - 28px);
-  padding: 40px 15px 0 15px;
+  padding: 40px 15px;
 }
 
 nav {
@@ -46,6 +46,10 @@ nav > a {
   height: 100%;
   width: 100%;
   justify-content: center;
+}
+
+.main h1 {
+  text-align: center;
 }
 
 .search-bar {
