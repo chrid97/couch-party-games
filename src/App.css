@@ -23,6 +23,7 @@ a:hover {
 
 .header {
   height: calc(50% - 28px);
+  padding: 40px 15px 0 15px;
 }
 
 nav {
@@ -83,10 +84,8 @@ nav > a {
   justify-content: center;
   background-color: black;
   color: white;
-  /* margin-right: 24px; */
   margin: 10px;
   border-radius: 15px;
-  /* border-radius: 10px; */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
