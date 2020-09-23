@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/couch-party-games/static/css/main.fd40e837.chunk.css",
+    "main.css": "/couch-party-games/static/css/main.ff71b1fc.chunk.css",
     "main.js": "/couch-party-games/static/js/main.ac9eff31.chunk.js",
     "main.js.map": "/couch-party-games/static/js/main.ac9eff31.chunk.js.map",
     "runtime-main.js": "/couch-party-games/static/js/runtime-main.e06fdcb4.js",
@@ -8,16 +8,16 @@
     "static/js/2.d649023c.chunk.js": "/couch-party-games/static/js/2.d649023c.chunk.js",
     "static/js/2.d649023c.chunk.js.map": "/couch-party-games/static/js/2.d649023c.chunk.js.map",
     "index.html": "/couch-party-games/index.html",
-    "precache-manifest.749ee8ebe84ad64b637203cdd6ebde2f.js": "/couch-party-games/precache-manifest.749ee8ebe84ad64b637203cdd6ebde2f.js",
+    "precache-manifest.33cf183a0eb0111c4da729c233067d06.js": "/couch-party-games/precache-manifest.33cf183a0eb0111c4da729c233067d06.js",
     "service-worker.js": "/couch-party-games/service-worker.js",
-    "static/css/main.fd40e837.chunk.css.map": "/couch-party-games/static/css/main.fd40e837.chunk.css.map",
+    "static/css/main.ff71b1fc.chunk.css.map": "/couch-party-games/static/css/main.ff71b1fc.chunk.css.map",
     "static/js/2.d649023c.chunk.js.LICENSE.txt": "/couch-party-games/static/js/2.d649023c.chunk.js.LICENSE.txt",
     "static/media/magnifying-glass.svg": "/couch-party-games/static/media/magnifying-glass.57ab24fd.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.e06fdcb4.js",
     "static/js/2.d649023c.chunk.js",
-    "static/css/main.fd40e837.chunk.css",
+    "static/css/main.ff71b1fc.chunk.css",
     "static/js/main.ac9eff31.chunk.js"
   ]
 }
