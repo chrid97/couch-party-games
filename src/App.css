@@ -137,11 +137,12 @@ nav > a {
 }
 
 .browse {
-  height: calc(100% - 56px);
-  max-width: 1520px;
-  /* max-width: 1380px; */
-  margin: 0 auto;
-  min-width: 320px;
+  /* height: calc(100% - 56px); */
+  width: 100%;
+  /* max-width: 1520px; */
+  max-width: 1380px;
+  /* margin: 0 auto; */
+  /* min-width: 320px; */
   /* padding-left: 20px;
   padding-right: 20px; */
   padding-left: 100px;
@@ -181,16 +182,23 @@ nav > a {
 }
 
 .game-list {
-  margin-top: 50px;
-  display: flex;
-  flex-wrap: wrap;
+  /* margin-top: 50px; */
+  /* display: flex;
+  flex-wrap: wrap; */
+  display: grid;
+  grid-gap: 28px 30px;
+  grid-template-columns: repeat(auto-fill,185px);
   justify-content: space-between;
 }
 
 .game-card {
-  flex: 1 0 16%;
-  margin-bottom: 50px;
+  /* flex: 1 0 16%; */
+  /* margin-bottom: 50px; */
   color: black;
+}
+
+.game-card:hover {
+  transform: translateY(-10px);
 }
 
 .banner {
@@ -226,14 +234,13 @@ nav > a {
   margin-right: 15px;
 }
 
+/* code for front page */
 .section2 {
   display: flex;
   flex-wrap: wrap;
   max-width: 1200px;
   width: 100%;
   height: 100%;
-  /* margin-left: auto;
-  margin-right: auto; */
 }
 
 .game-categories {
@@ -251,8 +258,6 @@ nav > a {
   background-repeat: no-repeat;
   background-position: center center;
   background-image: url(https://upload.wikimedia.org/wikipedia/en/5/5e/Fall_Guys_cover.jpg);
-  /* margin-right: 45px; */
-  /* margin-right: 6px; */
 }
 
 @media only screen and (max-width: 1200px)  {
