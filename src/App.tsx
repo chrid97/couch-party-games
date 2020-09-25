@@ -25,7 +25,7 @@ function App() {
 function Navbar({ games }: { games: Game[] }) {
   return (
     <Router>
-      <nav>
+      <nav className="nav center">
         <Link to="/">Home</Link>
         <Link to="/browse">Browse</Link>
       </nav>
