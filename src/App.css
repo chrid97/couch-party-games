@@ -35,6 +35,8 @@ a:hover {
 .main {
   height: 100%;
   justify-content: center;
+  /* padding: 40px 15px; */
+  padding: 114px 15px;
 }
 
 .main h1 {
@@ -93,124 +95,6 @@ a:hover {
   background-color: hsla(0, 0%, 100%, 0.25);
 }
 
-.browse {
-  height: calc(100% - 56px);
-  width: 100%;
-  /* max-width: 1520px; */
-  max-width: 1380px;
-}
-
-.browse > * {
-  margin-top: 30px;
-}
-
-.filter-input {
-  padding: 11px 16px;
-  /* width: 240px; */
-  width: 180px;
-  height: 38px;
-  box-shadow: 0 4px 16px 0 rgba(22, 42, 90, 0.12);
-  transition: box-shadow 0.3s ease;
-  border-radius: 8px;
-  background: #fff;
-  font-size: 14px;
-  /* min-height: 44px; */
-  border: none;
-  outline: none;
-  margin-right: 45px;
-}
-
-.filter-input::placeholder {
-  color: black;
-}
-
 .name {
   padding: 10px 0;
 }
-
-.filters {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.game-list {
-  display: grid;
-  grid-gap: 28px 30px;
-  grid-template-columns: repeat(auto-fill, 185px);
-  justify-content: center;
-}
-
-.game-card {
-  /* flex: 1 0 16%; */
-  /* margin-bottom: 50px; */
-  color: black;
-  transition-duration: 0.2s;
-}
-
-.game-card:hover {
-  transform: translateY(-10px);
-}
-
-.banner {
-  background-image: url(https://wallpaperaccess.com/full/3511118.jpg);
-  background-position: 50% 35%;
-  /* background-position: center center; */
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* height: 400px; */
-  /* height: 442px; */
-  /* height: 600px; */
-  height: 460px;
-  width: 100%;
-}
-
-.container {
-  /* display: flex;
-  flex-direction: column;
-  place-items: center; */
-}
-
-.carousel {
-}
-
-.carousel-items {
-  display: flex;
-  margin-top: 25px;
-  /* justify-content: space-around; */
-  /* flex: 1 0 16%; */
-}
-
-.carousel-item {
-  margin-right: 15px;
-}
-
-.card2 {
-  width: 185px;
-  height: 265px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-image: url(https://upload.wikimedia.org/wikipedia/en/5/5e/Fall_Guys_cover.jpg);
-  /* box-shadow: 0px 12px 6px 0px #00000040; */
-  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.3);
-}
-
-@media only screen and (max-width: 1540px) {
-  .game-list {
-    grid-gap: 25px 20px;
-  }
-}
-
-@media only screen and (max-width: 1200px) {
-  .game-list {
-    grid-gap: 25px 14px;
-  }
-}
-
-/* @media (max-width: 760px) {
-  .game-list {
-    grid-template-columns: repeat(auto-fill, minmax(105px, 1fr));
-    grid-gap: 25px 20px;
-  }
-} */

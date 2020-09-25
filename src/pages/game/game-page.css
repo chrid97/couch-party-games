@@ -1,0 +1,19 @@
+.carousel-items {
+  display: flex;
+  margin-top: 25px;
+  /* justify-content: space-around; */
+  /* flex: 1 0 16%; */
+}
+
+.banner {
+  background-image: url(https://wallpaperaccess.com/full/3511118.jpg);
+  background-position: 50% 35%;
+  /* background-position: center center; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* height: 400px; */
+  /* height: 442px; */
+  /* height: 600px; */
+  height: 460px;
+  width: 100%;
+}

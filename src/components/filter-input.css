@@ -1,0 +1,19 @@
+.filter-input {
+  padding: 11px 16px;
+  /* width: 240px; */
+  width: 180px;
+  height: 38px;
+  box-shadow: 0 4px 16px 0 rgba(22, 42, 90, 0.12);
+  transition: box-shadow 0.3s ease;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 14px;
+  /* min-height: 44px; */
+  border: none;
+  outline: none;
+  margin-right: 45px;
+}
+
+.filter-input::placeholder {
+  color: black;
+}

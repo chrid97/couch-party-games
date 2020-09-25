@@ -25,6 +25,7 @@ export interface Game {
   url: string;
   videos: Video[];
   websites: string[];
+  similar_games: number[];
 }
 
 export default Game; 

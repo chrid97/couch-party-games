@@ -1,5 +1,5 @@
 import React from "react";
-import MagnifyingGlass from "../images/magnifying-glass.svg";
+import MagnifyingGlass from "../../images/magnifying-glass.svg";
 import "./header.css";
 
 function Header() {

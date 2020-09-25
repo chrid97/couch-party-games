@@ -1,0 +1,25 @@
+.game-list {
+  display: grid;
+  grid-gap: 28px 30px;
+  grid-template-columns: repeat(auto-fill, 185px);
+  justify-content: center;
+}
+
+@media only screen and (max-width: 1540px) {
+  .game-list {
+    grid-gap: 25px 20px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .game-list {
+    grid-gap: 25px 14px;
+  }
+}
+
+/* @media (max-width: 760px) {
+  .game-list {
+    grid-template-columns: repeat(auto-fill, minmax(105px, 1fr));
+    grid-gap: 25px 20px;
+  }
+} */
