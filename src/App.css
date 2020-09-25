@@ -195,23 +195,6 @@ nav > a {
   margin-right: 15px;
 }
 
-/* code for front page */
-.section2 {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  width: 100%;
-  height: 100%;
-}
-
-.game-categories {
-  min-height: 360px;
-  /* height: calc(50% - 28px); */
-  width: 100%;
-  background-color: white;
-  justify-content: center;
-}
-
 .card2 {
   width: 185px;
   height: 265px;  
@@ -220,36 +203,3 @@ nav > a {
   background-position: center center;
   background-image: url(https://upload.wikimedia.org/wikipedia/en/5/5e/Fall_Guys_cover.jpg);
 }
-
-@media only screen and (max-width: 1200px)  {
-  .section2 {
-    max-width: 600px;
-  }
-}
-
-@media only screen and (max-width: 600px)  {
-  .section2 {
-    max-width: 300px;
-  }
-}
-/* 
-pub id: u64,
-pub slug: String,
-pub name: String,
-#[serde(default)]
-pub alternative_names: Vec<AlternativeName>,
-pub updated_at: u64,
-pub summary: Option<String>,
-pub cover: Option<Cover>,
-#[serde(default)]
-pub game_modes: Vec<u64>,
-#[serde(default)]
-pub genres: Vec<u64>,
-#[serde(default)]
-pub themes: Vec<u64>,
-#[serde(default)]
-pub keywords: HashSet<u64>,
-#[serde(default)]
-pub multiplayer_modes: Vec<MultiplayerMode>,
-pub screenshots: Option<Vec<Screenshot>>,
-pub videos: Option<Vec<Video>>, */
