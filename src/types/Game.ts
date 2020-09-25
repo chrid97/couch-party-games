@@ -2,6 +2,7 @@ import { Video } from '../Video';
 import { Cover } from './Cover';
 import { Genres } from './Genres';
 import { MultiplayerModes } from './MultiplayerModes';
+import { Platform } from './Platforms';
 import { Screenshot } from './Screenshot';
 import { Theme } from './Theme';
 
@@ -13,7 +14,7 @@ export interface Game {
   multiplayerModes: MultiplayerModes;
   genres: Genres;
   keywords: string[];
-  platforms: any;
+  platforms: Platform;
   player_perspectives: any;
   screenshots: Screenshot[];
   artworks: any;
