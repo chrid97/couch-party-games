@@ -1,81 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./App.css";
-import MagnifyingGlass from "./images/magnifying-glass.svg";
+import Header from "./header";
 import axios from "axios";
-
-export interface Game {
-  id: number;
-  name: string;
-  game_modes: [];
-  cover: Cover;
-  multiplayerModes: MultiplayerModes;
-  genres: Genres;
-  keywords: string[];
-  platforms: any;
-  player_perspectives: any;
-  screenshots: Screenshot[];
-  artworks: any;
-  storyline: string;
-  summary: string;
-  tags: string[];
-  themes: Theme[];
-  url: string;
-  videos: Video[];
-  websites: string[];
-}
-
-export interface MultiplayerModes {
-  id: number;
-  campaigncoop: boolean;
-  dropin: boolean;
-  game: number;
-  lancoop: boolean;
-  offlinecoop: boolean;
-  offlinecoopmax?: number; // exists if offlinecoop is true
-  offlinemax?: number;
-  onlinecoop: boolean;
-  onlinecoopmax?: number; // exists if onlinecoop is true
-  onlinemax?: number;
-  platform?: number;
-  splitscreen: boolean;
-}
-
-export interface Genres {
-  id: number;
-  name: string;
-  slug: string;
-}
-
-export interface Cover {
-  id: number;
-  image_id: string;
-}
-
-export interface GameMode {
-  id: number;
-}
-
-export interface Theme {
-  id: number;
-  image_id: string;
-  slug: string;
-}
-
-export interface Screenshot {
-  id: number;
-  imageId: string;
-}
-
-export interface Cover {
-  id: number;
-  image_id: string;
-}
-
-export interface Video {
-  id: number;
-  video_id: string;
-}
+import { Game } from "./types/Game";
 
 function App() {
   const [games, setGames] = useState([]);
@@ -106,7 +34,7 @@ function Navbar({ games }: { games: Game[] }) {
           <Browse games={games} />
         </Route>
         <Route path="/game">
-          <Game />
+          <GamePage />
         </Route>
         <Route path="/">
           <Home />
@@ -122,27 +50,6 @@ function Home() {
       <Header />
       <Section />
     </>
-  );
-}
-
-function Header() {
-  return (
-    <header className="header center">
-      <div className="center main">
-        <h1>
-          Discover what <span className="color">games</span> you&lsquo;ll play
-          with your friends!
-        </h1>
-        <div className="search-bar center">
-          <img src={MagnifyingGlass} alt="Magnifying Glass" />
-          <input
-            className="search"
-            type="text"
-            placeholder="Type in your favorite game to get similar games!"
-          ></input>
-        </div>
-      </div>
-    </header>
   );
 }
 
@@ -231,7 +138,7 @@ function GameCard({ game }: { game: Game }) {
   );
 }
 
-function Game() {
+function GamePage() {
   return (
     <div className="container">
       <div className="carousel center">
