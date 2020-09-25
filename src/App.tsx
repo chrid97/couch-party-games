@@ -64,7 +64,7 @@ export interface Theme {
 
 export interface Screenshot {
   id: number;
-  image_id: string;
+  imageId: string;
 }
 
 export interface Cover {
@@ -80,7 +80,7 @@ export interface Video {
 function App() {
   const [games, setGames] = useState([]);
   useEffect(() => {
-    axios.get("http://localhost:4000/games").then((res) => {
+    axios.get("http://localhost:4000/json").then((res) => {
       setGames(res.data);
       console.log(res);
     });
@@ -130,7 +130,8 @@ function Header() {
     <header className="header center">
       <div className="center main">
         <h1>
-          Discover what <span className="color">games</span> you&lsquo;ll play with your friends!
+          Discover what <span className="color">games</span> you&lsquo;ll play
+          with your friends!
         </h1>
         <div className="search-bar center">
           <img src={MagnifyingGlass} alt="Magnifying Glass" />
@@ -211,13 +212,18 @@ function FilterInput({ text }: { text: string }) {
 }
 
 function GameCard({ game }: { game: Game }) {
+  let backgroundUrl = ``;
+  if (game.cover !== undefined) {
+    backgroundUrl = `https://images.igdb.com/igdb/image/upload/t_cover_small/${game.cover.image_id}.jpg`;
+  } else {
+    backgroundUrl = "http://placehold.it/360x360";
+  }
   return (
     <Link to="game" className="game-card">
       <div
-//         style={{
-//           backgroundImage: `url(https://images.igdb.com/igdb/image/upload/t_cover_small/${game.cover.image_id}.jpg
-// ${game})`,
-//         }}
+        style={{
+          backgroundImage: `url(${backgroundUrl})`,
+        }}
         className="card2"
       ></div>
       <p>{game.name}</p>
