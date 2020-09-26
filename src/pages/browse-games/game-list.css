@@ -2,7 +2,7 @@
   display: grid;
   grid-gap: 28px 30px;
   grid-template-columns: repeat(auto-fill, 185px);
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 @media only screen and (max-width: 1540px) {

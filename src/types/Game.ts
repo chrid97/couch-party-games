@@ -9,6 +9,7 @@ import { Theme } from './Theme';
 export interface Game {
   id: number;
   name: string;
+  slug: string;
   game_modes: [];
   cover: Cover;
   multiplayerModes: MultiplayerModes;

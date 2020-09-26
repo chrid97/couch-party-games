@@ -36,8 +36,8 @@ function Navbar({ games }: { games: Game[] }) {
         <Route path="/browse">
           <Browse games={games} />
         </Route>
-        <Route path="/game">
-          <GamePage game={games[0]} />
+        <Route path="/games/:gameSlug">
+          <GamePage games={games} />
         </Route>
         <Route path="/">
           <Home />

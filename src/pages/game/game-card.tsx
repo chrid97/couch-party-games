@@ -11,7 +11,7 @@ function GameCard({ game }: { game: Game }) {
     backgroundUrl = 'http://placehold.it/360x360';
   }
   return (
-    <Link to="game" className="game-card">
+    <Link to={`/games/${game.slug}`} className="game-card">
       <div
         style={{
           backgroundImage: `url(${backgroundUrl})`,
