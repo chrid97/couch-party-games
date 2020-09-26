@@ -43,6 +43,8 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "prettier": "2.1.2"
+  },
   "homepage": "https://chrid97.github.io/couch-party-games"
 }
