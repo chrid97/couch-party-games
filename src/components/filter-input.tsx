@@ -1,5 +1,5 @@
-import React from "react";
-import "./filter-input.css";
+import React from 'react';
+import './filter-input.css';
 
 function FilterInput({ text }: { text: string }) {
   return (

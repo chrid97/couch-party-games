@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from "react-router-dom";
-import { Game } from '../../types/Game'
+import { Link } from 'react-router-dom';
+import { Game } from '../../types/Game';
 import './carousel-item.css';
 
 function CarouselItem() {

@@ -1,8 +1,8 @@
-import React from "react";
-import { Game } from "../../types/Game";
-import "./browse.css";
-import GameList from "./game-list";
-import Filters from "./filters";
+import React from 'react';
+import { Game } from '../../types/Game';
+import './browse.css';
+import GameList from './game-list';
+import Filters from './filters';
 
 function Browse({ games }: { games: Game[] }) {
   return (

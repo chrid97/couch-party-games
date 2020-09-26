@@ -1,6 +1,6 @@
-import React from "react";
-import "./filters.css";
-import FilterInput from "../../components/filter-input"
+import React from 'react';
+import './filters.css';
+import FilterInput from '../../components/filter-input';
 
 function Filters() {
   return (

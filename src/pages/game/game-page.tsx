@@ -1,7 +1,7 @@
-import React from "react";
-import { Game } from "../../types/Game";
-import "./game-page.css";
-import CarouselItem from "./carousel-item";
+import React from 'react';
+import { Game } from '../../types/Game';
+import './game-page.css';
+import CarouselItem from './carousel-item';
 
 function GamePage({ game }: { game: Game }) {
   return (
