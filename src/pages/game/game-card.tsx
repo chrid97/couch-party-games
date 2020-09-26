@@ -6,7 +6,7 @@ import { Game } from '../../types/Game';
 function GameCard({ game }: { game: Game }) {
   let backgroundUrl = ``;
   if (game.cover !== undefined) {
-    backgroundUrl = `https://images.igdb.com/igdb/image/upload/t_cover_small/${game.cover.image_id}.jpg`;
+    backgroundUrl = `https://images.igdb.com/igdb/image/upload/t_1080p/${game.cover.image_id}.jpg`;
   } else {
     backgroundUrl = 'http://placehold.it/360x360';
   }
