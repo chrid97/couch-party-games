@@ -1,9 +1,9 @@
-import React from 'react';
-import { Game } from '../../types/Game';
-import './game-page.css';
-import CarouselItem from './carousel-item';
+import React from "react";
+import { Game } from "../../types/Game";
+import "./game-page.css";
+import CarouselItem from "./carousel-item";
 
-function GamePage() {
+function GamePage({ game }: { game: Game }) {
   return (
     <div className="container">
       <div className="carousel center">
