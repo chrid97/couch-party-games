@@ -25,6 +25,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint './src/**/*.{ts,tsx}'",
+    "format": "prettier --check --write \"**/*.{tsx,html,css}\"",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
