@@ -1,14 +1,14 @@
 import React from 'react';
-import './single-game.css';
-import { Link } from "react-router-dom";
-import { Game } from '../../types/Game'
+import './game-card.css';
+import { Link } from 'react-router-dom';
+import { Game } from '../../types/Game';
 
 function GameCard({ game }: { game: Game }) {
   let backgroundUrl = ``;
   if (game.cover !== undefined) {
     backgroundUrl = `https://images.igdb.com/igdb/image/upload/t_cover_small/${game.cover.image_id}.jpg`;
   } else {
-    backgroundUrl = "http://placehold.it/360x360";
+    backgroundUrl = 'http://placehold.it/360x360';
   }
   return (
     <Link to="game" className="game-card">
@@ -24,5 +24,3 @@ function GameCard({ game }: { game: Game }) {
 }
 
 export default GameCard;
-
-
