@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/couch-party-games/static/css/main.ff71b1fc.chunk.css",
-    "main.js": "/couch-party-games/static/js/main.ac9eff31.chunk.js",
-    "main.js.map": "/couch-party-games/static/js/main.ac9eff31.chunk.js.map",
+    "main.css": "/couch-party-games/static/css/main.a03029fc.chunk.css",
+    "main.js": "/couch-party-games/static/js/main.f5680695.chunk.js",
+    "main.js.map": "/couch-party-games/static/js/main.f5680695.chunk.js.map",
     "runtime-main.js": "/couch-party-games/static/js/runtime-main.e06fdcb4.js",
     "runtime-main.js.map": "/couch-party-games/static/js/runtime-main.e06fdcb4.js.map",
-    "static/js/2.d649023c.chunk.js": "/couch-party-games/static/js/2.d649023c.chunk.js",
-    "static/js/2.d649023c.chunk.js.map": "/couch-party-games/static/js/2.d649023c.chunk.js.map",
+    "static/js/2.c4572200.chunk.js": "/couch-party-games/static/js/2.c4572200.chunk.js",
+    "static/js/2.c4572200.chunk.js.map": "/couch-party-games/static/js/2.c4572200.chunk.js.map",
     "index.html": "/couch-party-games/index.html",
-    "precache-manifest.33cf183a0eb0111c4da729c233067d06.js": "/couch-party-games/precache-manifest.33cf183a0eb0111c4da729c233067d06.js",
+    "precache-manifest.8bc787c353b3ac02a2bddf097d164a32.js": "/couch-party-games/precache-manifest.8bc787c353b3ac02a2bddf097d164a32.js",
     "service-worker.js": "/couch-party-games/service-worker.js",
-    "static/css/main.ff71b1fc.chunk.css.map": "/couch-party-games/static/css/main.ff71b1fc.chunk.css.map",
-    "static/js/2.d649023c.chunk.js.LICENSE.txt": "/couch-party-games/static/js/2.d649023c.chunk.js.LICENSE.txt",
+    "static/css/main.a03029fc.chunk.css.map": "/couch-party-games/static/css/main.a03029fc.chunk.css.map",
+    "static/js/2.c4572200.chunk.js.LICENSE.txt": "/couch-party-games/static/js/2.c4572200.chunk.js.LICENSE.txt",
     "static/media/magnifying-glass.svg": "/couch-party-games/static/media/magnifying-glass.57ab24fd.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.e06fdcb4.js",
-    "static/js/2.d649023c.chunk.js",
-    "static/css/main.ff71b1fc.chunk.css",
-    "static/js/main.ac9eff31.chunk.js"
+    "static/js/2.c4572200.chunk.js",
+    "static/css/main.a03029fc.chunk.css",
+    "static/js/main.f5680695.chunk.js"
   ]
 }

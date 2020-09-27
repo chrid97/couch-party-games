@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/couch-party-games/precache-manifest.33cf183a0eb0111c4da729c233067d06.js"
+  "/couch-party-games/precache-manifest.8bc787c353b3ac02a2bddf097d164a32.js"
 );
 
 self.addEventListener('message', (event) => {
