@@ -9,7 +9,6 @@
   place-items: center;
   justify-content: center; */
   margin: 0 auto;
-  /* max-width: 1075px; */
 }
 
 .carousel-items {
@@ -37,6 +36,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  margin: 0 auto;
+  max-width: 1520px;
 }
 
 .images > img {
@@ -44,22 +45,23 @@
   height: 130px; */
   width: 495px;
   height: 280px;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 
 .summary {
   max-width: 1075px;
-  text-overflow: ellipsis;
+  /* text-overflow: ellipsis;
   white-space: nowrap;
-  overflow: hidden;
+  overflow: hidden; */
 }
 
 .header2 {
   display: flex;
   flex-direction: column;
   background-color: white;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   height: 298px;
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.3);
 }
 
 .main-content {
@@ -72,4 +74,5 @@
   transition: 0.8s ease 0s, top 0.5s ease 0s;
   background: rgba(35, 38, 67, 0.5);
   color: #e5e7ea;
+  background: rgba(238,97,125, 0.5)
 } */

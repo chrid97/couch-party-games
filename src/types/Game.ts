@@ -15,7 +15,7 @@ export interface Game {
   multiplayerModes: MultiplayerModes;
   genres: Genres;
   keywords: string[];
-  platforms: Platform;
+  platforms: Platform[];
   player_perspectives: any;
   screenshots: Screenshot[];
   artworks: any;

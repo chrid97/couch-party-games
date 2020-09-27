@@ -18,7 +18,7 @@ function GamePage({ games }: { games: Game[] }) {
 
   let backgroundUrl = ``;
   if (game.cover !== undefined) {
-    backgroundUrl = `https://images.igdb.com/igdb/image/upload/t_1080p/${game.cover.image_id}.jpg`;
+    backgroundUrl = `https://images.igdb.com/igdb/image/upload/t_1080p/${game.screenshots[2].image_id}.jpg`;
   } else {
     backgroundUrl = 'http://placehold.it/360x360';
   }
@@ -35,7 +35,12 @@ function GamePage({ games }: { games: Game[] }) {
         <div className="header2">
           <div className="main-content">
             <h1>{game.name}</h1>
-            <div>Platforms</div>
+            <div>
+              Platforms:{' '}
+              {game.platforms.map((platform) => (
+                <span key={platform.id}>{platform.name} | </span>
+              ))}
+            </div>
             <div># of Players Platform Genre Theme</div>
             <p className="summary">{game.summary}</p>
           </div>
