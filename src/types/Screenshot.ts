@@ -1,4 +1,4 @@
 export interface Screenshot {
   id: number;
-  imageId: string;
+  image_id: string;
 }
