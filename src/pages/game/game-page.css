@@ -4,18 +4,12 @@
 }
 
 .game-content {
-  /* display: flex;
-  flex-direction: column;
-  place-items: center;
-  justify-content: center; */
   margin: 0 auto;
 }
 
 .carousel-items {
   display: flex;
   margin-top: 25px;
-  /* justify-content: space-around; */
-  /* flex: 1 0 16%; */
 }
 
 .banner {
@@ -41,8 +35,6 @@
 }
 
 .images > img {
-  /* width: 220px;
-  height: 130px; */
   width: 495px;
   height: 280px;
   margin-bottom: 10px;
@@ -50,9 +42,9 @@
 
 .summary {
   max-width: 1075px;
-  /* text-overflow: ellipsis;
+  text-overflow: ellipsis;
   white-space: nowrap;
-  overflow: hidden; */
+  overflow: hidden;
 }
 
 .header2 {
