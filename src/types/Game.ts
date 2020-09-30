@@ -5,18 +5,21 @@ import { MultiplayerModes } from './MultiplayerModes';
 import { Platform } from './Platforms';
 import { Screenshot } from './Screenshot';
 import { Theme } from './Theme';
+import { PlayerPerspective } from './PlayerPerspective'
+import { GameMode } from './GameMode';
+import { Keywords } from './Keywords';
 
 export interface Game {
   id: number;
   name: string;
   slug: string;
-  game_modes: [];
+  game_modes: GameMode[];
   cover: Cover;
   multiplayerModes: MultiplayerModes;
-  genres: Genres;
-  keywords: string[];
+  genres: Genres[];
+  keywords: Keywords[];
   platforms: Platform[];
-  player_perspectives: any;
+  player_perspectives: PlayerPerspective[];
   screenshots: Screenshot[];
   artworks: any;
   storyline: string;
