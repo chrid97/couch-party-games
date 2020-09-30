@@ -35,15 +35,24 @@ function GamePage({ games }: { games: Game[] }) {
       <div className="game-content">
         <div className="header2">
           <div className="main-content">
-            {/* <GameCard game={game} /> */}
-            <h1>{game.name}</h1>
-            <ItemList items={game.platforms} text={'Platforms'} />
-            <ItemList items={game.themes} text={'Themes'} />
-            <ItemList items={game.player_perspectives} text={'Player Perspective'} />
-            <ItemList items={game.game_modes} text={'Game Modes'} />
-            <ItemList items={game.genres} text={'Genres'} />
-            <ItemList items={game.keywords} text={'Keywords'} />
-            <p className="summary">{game.summary}</p>
+            <div>
+              <img
+              className="card-image"
+                src={`https://images.igdb.com/igdb/image/upload/t_1080p/${game.cover.image_id}.jpg`}
+                alt="cover"
+              ></img>
+            </div>
+            <div>
+              {/* <GameCard game={game} /> */}
+              <h1>{game.name}</h1>
+              <ItemList items={game.platforms} text={'Platforms'} />
+              <ItemList items={game.themes} text={'Themes'} />
+              <ItemList items={game.player_perspectives} text={'Player Perspective'} />
+              <ItemList items={game.game_modes} text={'Game Modes'} />
+              <ItemList items={game.genres} text={'Genres'} />
+              <ItemList items={game.keywords} text={'Keywords'} />
+              <p className="summary">{game.summary}</p>
+            </div>
           </div>
         </div>
         <div className="images">
@@ -60,7 +69,7 @@ function GamePage({ games }: { games: Game[] }) {
   );
 }
 
-function ItemList({ items, text, className='chip' }: { items: any; text: string; className?: string }) {
+function ItemList({ items, text, className = 'chip' }: { items: any; text: string; className?: string }) {
   return (
     <div className={className}>
       {text}:{' '}

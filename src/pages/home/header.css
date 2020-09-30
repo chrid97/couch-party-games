@@ -1,6 +1,7 @@
 .header {
   height: calc(50% - 28px);
   width: 100%;
+  /* background-image: url(../../images/gaming-pattern-003.svg); */
 }
 
 .search-bar {

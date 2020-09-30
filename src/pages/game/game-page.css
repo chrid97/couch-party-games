@@ -50,7 +50,7 @@
 .header2 {
   display: flex;
   flex-direction: column;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
   margin-bottom: 30px;
   height: 298px;
   box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.3);
@@ -60,6 +60,17 @@
 .main-content {
   margin: 0 auto;
   max-width: 1075px;
+  display: grid;
+  grid-column-gap: 30px;
+  grid-template-columns: 215px auto;
+  padding: 0 30px;
+}
+
+.card-image {
+  height: 352px;
+  height: 304px;
+  width: 215px;
+  margin-top: -125px;
 }
 
 .tags {
