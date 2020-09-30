@@ -3,6 +3,7 @@ import { Game } from '../../types/Game';
 import { useParams } from 'react-router-dom';
 import './game-page.css';
 import CarouselItem from './carousel-item';
+import GameCard from './game-card';
 
 interface ParamTypes {
   gameSlug: string;
@@ -34,43 +35,14 @@ function GamePage({ games }: { games: Game[] }) {
       <div className="game-content">
         <div className="header2">
           <div className="main-content">
+            {/* <GameCard game={game} /> */}
             <h1>{game.name}</h1>
-            <div>
-              Platforms:{' '}
-              {game.platforms.map((platform) => (
-                <span key={platform.id}>{platform.name} | </span>
-              ))}
-            </div>
-            <div>
-              Themes:{' '}
-              {game.themes.map((theme) => (
-                <span key={theme.id}>{theme.name} | </span>
-              ))}
-            </div>
-            <div>
-              Player Perspective:{' '}
-              {game.player_perspectives.map((perspective) => (
-                <span key={perspective.id}>{perspective.name} | </span>
-              ))}
-            </div>
-            <div>
-              Game Modes:{' '}
-              {game.game_modes.map((gameMode) => (
-                <span key={gameMode.id}>{gameMode.name} | </span>
-              ))}
-            </div>
-            <div>
-              Genres:{' '}
-              {game.genres.map((genre) => (
-                <span key={genre.id}>{genre.name} | </span>
-              ))}
-            </div>
-            <div>
-              Keywords:{' '}
-              {game.keywords.map((keyword) => (
-                <span key={keyword.id}>{keyword.name} | </span>
-              ))}
-            </div>
+            <ItemList items={game.platforms} text={'Platforms'} />
+            <ItemList items={game.themes} text={'Themes'} />
+            <ItemList items={game.player_perspectives} text={'Player Perspective'} />
+            <ItemList items={game.game_modes} text={'Game Modes'} />
+            <ItemList items={game.genres} text={'Genres'} />
+            <ItemList items={game.keywords} text={'Keywords'} />
             <p className="summary">{game.summary}</p>
           </div>
         </div>
@@ -84,6 +56,17 @@ function GamePage({ games }: { games: Game[] }) {
           ))}
         </div>
       </div>
+    </div>
+  );
+}
+
+function ItemList({ items, text, className='chip' }: { items: any; text: string; className?: string }) {
+  return (
+    <div className={className}>
+      {text}:{' '}
+      {items.map((item: any) => (
+        <span key={item.id}>{item.name} | </span>
+      ))}
     </div>
   );
 }
