@@ -41,7 +41,36 @@ function GamePage({ games }: { games: Game[] }) {
                 <span key={platform.id}>{platform.name} | </span>
               ))}
             </div>
-            <div># of Players Platform Genre Theme</div>
+            <div>
+              Themes:{' '}
+              {game.themes.map((theme) => (
+                <span key={theme.id}>{theme.name} | </span>
+              ))}
+            </div>
+            <div>
+              Player Perspective:{' '}
+              {game.player_perspectives.map((perspective) => (
+                <span key={perspective.id}>{perspective.name} | </span>
+              ))}
+            </div>
+            <div>
+              Game Modes:{' '}
+              {game.game_modes.map((gameMode) => (
+                <span key={gameMode.id}>{gameMode.name} | </span>
+              ))}
+            </div>
+            <div>
+              Genres:{' '}
+              {game.genres.map((genre) => (
+                <span key={genre.id}>{genre.name} | </span>
+              ))}
+            </div>
+            <div>
+              Keywords:{' '}
+              {game.keywords.map((keyword) => (
+                <span key={keyword.id}>{keyword.name} | </span>
+              ))}
+            </div>
             <p className="summary">{game.summary}</p>
           </div>
         </div>
