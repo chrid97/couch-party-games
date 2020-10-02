@@ -40,6 +40,16 @@
   margin-bottom: 9px;
 }
 
+.images > *:hover {
+  /* width: 100%;
+  height: 100%; */
+  transform: scale(1.5);
+}
+
+.enlarged {
+  transform: scale(1.2);
+}
+
 .summary {
   max-width: 1075px;
   /* text-overflow: ellipsis;
@@ -71,6 +81,9 @@
   height: 304px;
   width: 215px;
   margin-top: -125px;
+  border-radius: 2px;
+  box-shadow: 0 0 29px rgba(49, 54, 68, 0.25);
+  /* margin-top: 15px; */
 }
 
 .tags {
