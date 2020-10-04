@@ -19,7 +19,8 @@ function GamePage({ games }: { games: Game[] }) {
 
   let backgroundUrl = ``;
   if (game.cover !== undefined) {
-    backgroundUrl = `https://images.igdb.com/igdb/image/upload/t_1080p/${game.screenshots[2].image_id}.jpg`;
+    const randomImage = Math.floor(Math.random() * Math.floor(game.screenshots.length));
+    backgroundUrl = `https://images.igdb.com/igdb/image/upload/t_1080p/${game.screenshots[randomImage].image_id}.jpg`;
   } else {
     backgroundUrl = 'http://placehold.it/360x360';
   }
@@ -37,7 +38,7 @@ function GamePage({ games }: { games: Game[] }) {
           <div className="main-content">
             <div>
               <img
-              className="card-image"
+                className="card-image"
                 src={`https://images.igdb.com/igdb/image/upload/t_1080p/${game.cover.image_id}.jpg`}
                 alt="cover"
               ></img>
@@ -57,10 +58,13 @@ function GamePage({ games }: { games: Game[] }) {
         </div>
         <div className="images">
           {game.screenshots.map((screenshots) => (
+            // <div onClick={() => void 0} role="button" aria-hidden /> // This is hidden from screenreader.
             <img
               key={screenshots.id}
               src={`https://images.igdb.com/igdb/image/upload/t_1080p/${screenshots.image_id}.jpg`}
               alt="game"
+              onClick={() => Dialog()}
+              aria-hidden
             ></img>
           ))}
         </div>
@@ -71,11 +75,20 @@ function GamePage({ games }: { games: Game[] }) {
 
 function ItemList({ items, text, className = 'chip' }: { items: any; text: string; className?: string }) {
   return (
-    <div className={className}>
+    <p className={className}>
       {text}:{' '}
       {items.map((item: any) => (
-        <span key={item.id}>{item.name} | </span>
+        <span key={item.id}>{item.name}, </span>
       ))}
+    </p>
+  );
+}
+
+function Dialog() {
+  return (
+    <div>
+      sup
+      {/* <img src={url} alt="game"></img> */}
     </div>
   );
 }
