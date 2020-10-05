@@ -1,6 +1,5 @@
-.filter-input {
+.filter {
   padding: 11px 16px;
-  /* width: 240px; */
   width: 180px;
   height: 38px;
   box-shadow: 0 4px 16px 0 rgba(22, 42, 90, 0.12);
@@ -14,6 +13,6 @@
   margin-right: 45px;
 }
 
-.filter-input::placeholder {
+.filter::placeholder {
   color: black;
 }
