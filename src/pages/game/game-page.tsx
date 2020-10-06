@@ -2,8 +2,6 @@ import React from 'react';
 import { Game } from '../../types/Game';
 import { useParams } from 'react-router-dom';
 import './game-page.css';
-import CarouselItem from './carousel-item';
-import GameCard from './game-card';
 
 interface ParamTypes {
   gameSlug: string;
@@ -27,11 +25,8 @@ function GamePage({ games }: { games: Game[] }) {
 
   return (
     <div className="container">
-      <div className="carousel center">
+      <div className="center">
         <div style={{ backgroundImage: `url(${backgroundUrl})` }} className="banner"></div>
-        {/* <div className="carousel-items">
-          <CarouselItem />
-        </div> */}
       </div>
       <div className="game-content">
         <div className="header2">
@@ -44,7 +39,6 @@ function GamePage({ games }: { games: Game[] }) {
               ></img>
             </div>
             <div>
-              {/* <GameCard game={game} /> */}
               <h1>{game.name}</h1>
               <ItemList items={game.platforms} text={'Platforms'} />
               <ItemList items={game.themes} text={'Themes'} />
