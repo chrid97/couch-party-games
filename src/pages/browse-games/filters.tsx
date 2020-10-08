@@ -1,16 +1,17 @@
 import React from 'react';
 import './filters.css';
 import Filter from '../../components/filter';
+import Game from '../../types/Game';
 
-function Filters() {
+function Filters({ games }: { games: Game[] }) {
   return (
     <div className="filters">
-      <Filter queries={MODES} text="Type of Co-Op" />
-      <Filter text="# of Players" />
-      <Filter queries={GENRES} text="Genres" />
-      <Filter queries={THEMES} text="Themes" />
-      <Filter text="Keywords" />
-      <Filter queries={PLATFORMS} text="Platforms" />
+      <Filter games={games} queries={MODES} text="Type of Co-Op" />
+      <Filter games={games} text="# of Players" />
+      <Filter games={games} queries={GENRES} text="Genres" />
+      <Filter games={games} queries={THEMES} text="Themes" />
+      <Filter games={games} text="Keywords" />
+      <Filter games={games} queries={PLATFORMS} text="Platforms" />
     </div>
   );
 }

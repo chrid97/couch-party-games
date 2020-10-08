@@ -6,10 +6,9 @@
   border-radius: 8px;
   background: #fff;
   font-size: 14px;
-  /* min-height: 44px; */
   border: none;
   outline: none;
-  margin-right: 45px;
+  margin-right: 25px;
 }
 
 .filter::placeholder {

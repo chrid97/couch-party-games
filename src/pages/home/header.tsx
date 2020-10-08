@@ -1,8 +1,9 @@
 import React from 'react';
 import MagnifyingGlass from '../../images/magnifying-glass.svg';
+import Game from '../../types/Game';
 import './header.css';
 
-function Header() {
+function Header({ games }: { games: Game[] }) {
   return (
     <header className="header center">
       <div className="center main">

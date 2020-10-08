@@ -40,17 +40,17 @@ function Navbar({ games }: { games: Game[] }) {
           <GamePage games={games} />
         </Route>
         <Route path="/">
-          <Home />
+          <Home games={games} />
         </Route>
       </Switch>
     </Router>
   );
 }
 
-function Home() {
+function Home({ games }: { games: Game[] }) {
   return (
     <>
-      <Header />
+      <Header games={games} />
       <Section />
     </>
   );

@@ -7,7 +7,7 @@ import Filters from './filters';
 function Browse({ games }: { games: Game[] }) {
   return (
     <div className="browse">
-      <Filters />
+      <Filters games={games}/>
       <GameList games={games} />
     </div>
   );
