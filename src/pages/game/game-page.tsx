@@ -51,7 +51,7 @@ function GamePage({ games }: { games: Game[] }) {
           </div>
         </div>
         <div className="images">
-          {game.screenshots.map((screenshots) => (
+          {game.screenshots?.map((screenshots) => (
             // <div onClick={() => void 0} role="button" aria-hidden /> // This is hidden from screenreader.
             <img
               key={screenshots.id}
@@ -71,7 +71,7 @@ function ItemList({ items, text, className = 'chip' }: { items: any; text: strin
   return (
     <p className={className}>
       {text}:{' '}
-      {items.map((item: any) => (
+      {items?.map((item: any) => (
         <span key={item.id}>{item.name}, </span>
       ))}
     </p>
