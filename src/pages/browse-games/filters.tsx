@@ -1,17 +1,17 @@
-import React from 'react';
+import React, { Dispatch, SetStateAction } from 'react';
 import './filters.css';
 import Filter from '../../components/filter';
 import Game from '../../types/Game';
 
-function Filters({ games }: { games: Game[] }) {
+function Filters({ games, setFilteredGames }: { games: Game[]; setFilteredGames: Dispatch<SetStateAction<Game[]>> }) {
   return (
     <div className="filters">
-      <Filter games={games} queries={MODES} text="Type of Co-Op" />
-      <Filter games={games} text="# of Players" />
-      <Filter games={games} queries={GENRES} text="Genres" />
-      <Filter games={games} queries={THEMES} text="Themes" />
-      <Filter games={games} text="Keywords" />
-      <Filter games={games} queries={PLATFORMS} text="Platforms" />
+      <Filter games={games} setFilteredGames={setFilteredGames} queries={MODES} text="Type of Co-Op" />
+      <Filter games={games} setFilteredGames={setFilteredGames} text="# of Players" />
+      <Filter games={games} setFilteredGames={setFilteredGames} queries={GENRES} text="Genres" />
+      <Filter games={games} setFilteredGames={setFilteredGames} queries={THEMES} text="Themes" />
+      <Filter games={games} setFilteredGames={setFilteredGames} text="Keywords" />
+      <Filter games={games} setFilteredGames={setFilteredGames} queries={PLATFORMS} text="Platforms" />
     </div>
   );
 }

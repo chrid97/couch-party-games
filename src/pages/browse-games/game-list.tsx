@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Game } from '../../types/Game';
 import './game-list.css';
 import GameCard from '../game/game-card';
