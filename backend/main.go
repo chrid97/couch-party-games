@@ -9,7 +9,6 @@ import (
 	"strings"
 )
 
-const igdb string = "https://api-v3.igdb.com/games"
 const IGDB_MAX_LIMIT uint16 = 500
 
 func main() {
@@ -36,8 +35,9 @@ func getGames(w http.ResponseWriter, r *http.Request) {
 	client := &http.Client{
 		// CheckRedirect: redirectPolicyFunc,
 	}
-	req, err := http.NewRequest("GET", igdb, resBody)
-	req.Header.Add("user-key", config.Key)
+	req, err := http.NewRequest("POST", "https://api.igdb.com/v4/games", resBody)
+	req.Header.Add("Client-ID", config.ClientId)
+	req.Header.Add("Authorization", config.Authorization)
 	resp, err := client.Do(req)
 	if err != nil {
 		log.Fatalln(err)
@@ -66,7 +66,8 @@ func serveJson(w http.ResponseWriter, r *http.Request) {
 }
 
 type config struct {
-	Key string
+	ClientId string
+	Authorization string
 	Games []game
 }
 
