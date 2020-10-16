@@ -18,18 +18,6 @@ func handleRequests() {
 	http.HandleFunc("/themes", getThemes)
 	http.HandleFunc("/platforms", getPlatforms)
 	http.HandleFunc("/game_modes", getGameModes)
-	http.HandleFunc("/json", serveJson)
 	log.Fatal(http.ListenAndServe(":4000", nil))
 }
 
-func serveJson(w http.ResponseWriter, r *http.Request) {
-	w.Header().Set("Content-type", "application/json")
-	w.Header().Set("Access-Control-Allow-Origin", "*")
-	w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
-
-	body, err := ioutil.ReadFile("./games.json")
-	if err != nil {
-		log.Fatalln(err)
-	}
-	w.Write([]byte(body))
-}
