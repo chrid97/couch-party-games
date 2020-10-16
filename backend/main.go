@@ -15,6 +15,9 @@ func main() {
 func handleRequests() {
 	http.HandleFunc("/games", getGames)
 	http.HandleFunc("/genres", getGenres)
+	http.HandleFunc("/themes", getThemes)
+	http.HandleFunc("/platforms", getPlatforms)
+	http.HandleFunc("/game_modes", getGameModes)
 	http.HandleFunc("/json", serveJson)
 	log.Fatal(http.ListenAndServe(":4000", nil))
 }
