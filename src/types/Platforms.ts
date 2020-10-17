@@ -5,6 +5,6 @@ export type PlatformName =
   | "web Browser";
 
 export interface Platform {
-  id: string;
+  id: number;
   name: PlatformName;
 }

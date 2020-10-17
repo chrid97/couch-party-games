@@ -11,7 +11,7 @@ import Browse from './pages/browse-games/browse';
 function App() {
   const [games, setGames] = useState([]);
   useEffect(() => {
-    axios.get('http://localhost:4000/json').then((res) => {
+    axios.get('http://localhost:4000/games').then((res) => {
       setGames(res.data);
       console.log(res);
     });
