@@ -1,45 +1,46 @@
-import React, { ChangeEvent, Dispatch, SetStateAction } from 'react';
+import React, { Dispatch, SetStateAction } from 'react';
 import Game from '../types/Game';
 import './filter.css';
+import Select from 'react-select';
 
-const themeOptions: string[] = [];
-const genreOptions: string[] = [];
-const platformOptions: string[] = [];
-const gameModeOptions: string[] = [];
+interface Option {
+  value: number;
+  label: string;
+}
+
+let genreOptions: Option[] = [];
+let themeOptions: Option[] = [];
+let platformOptions: Option[] = [];
+let gameModeOptions: Option[] = [];
 
 function handleGenreFilter(
-  event: ChangeEvent<HTMLInputElement>,
+  options: any,
   games: Game[],
   setFilteredgames: Dispatch<SetStateAction<Game[]>>,
   filterType: string,
 ) {
-  const value = event.target.value;
-  if (value === '' && filterType === 'Genres') {
-    genreOptions.pop();
-  } else if (value === '' && filterType === 'Themes') {
-    themeOptions.pop();
-  } else if (value === '' && filterType === 'Platforms') {
-    platformOptions.pop();
-  } else if (value === '' && filterType === 'Type of Co-Op') {
-    gameModeOptions.pop();
-  } else if (filterType === 'Genres') {
-    genreOptions.push(value);
+  if (options == undefined) {
+    options = [];
+  }
+
+  if (filterType === 'Genres') {
+    genreOptions = options;
   } else if (filterType === 'Themes') {
-    themeOptions.push(value);
+    themeOptions = options;
   } else if (filterType === 'Platforms') {
-    platformOptions.push(value);
+    platformOptions = options;
   } else if (filterType === 'Type of Co-Op') {
-    gameModeOptions.push(value);
+    gameModeOptions = options;
   }
 
   const filteredGames = games
-    .filter((game) => genreOptions.every((option) => game.genres.map((genre) => genre.id).includes(Number(option))))
-    .filter((game) => themeOptions.every((option) => game.themes.map((theme) => theme.id).includes(Number(option))))
+    .filter((game) => genreOptions.every((option) => game.genres.map((genre) => genre.id).includes(option.value)))
+    .filter((game) => themeOptions.every((option) => game.themes.map((theme) => theme.id).includes(option.value)))
     .filter((game) =>
-      gameModeOptions.every((option) => game.game_modes.map((gameMode) => gameMode.id).includes(Number(option))),
+      gameModeOptions.every((option) => game.game_modes.map((gameMode) => gameMode.id).includes(option.value)),
     )
     .filter((game) =>
-      platformOptions.every((option) => game.platforms.map((platform) => platform.id).includes(Number(option))),
+      platformOptions.every((option) => game.platforms.map((platform) => platform.id).includes(option.value)),
     );
 
   setFilteredgames(filteredGames);
@@ -53,23 +54,20 @@ interface FilterProps {
 }
 
 function Filter({ text, queries, games, setFilteredGames }: FilterProps) {
+  const options = queries?.map(
+    (query): Option => {
+      return { value: query.id, label: query.name };
+    },
+  );
+
   return (
-    <div>
-      {/* maybe replace div with label */}
-      <div className="name">{text}</div>
-      <div>
-        <input
-          className="filter"
-          list={text}
-          onChange={(e) => handleGenreFilter(e, games, setFilteredGames, text)}
-        ></input>
-        <datalist id={text}>
-          {queries?.map((query, i) => {
-            return <option key={i} value={query.id} label={query.name}></option>;
-          })}
-        </datalist>
-      </div>
-    </div>
+    <Select
+      options={options}
+      isMulti
+      className="filter"
+      placeholder={text}
+      onChange={(e) => handleGenreFilter(e, games, setFilteredGames, text)}
+    ></Select>
   );
 }
 
